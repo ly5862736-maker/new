@@ -704,7 +704,6 @@ form.addEventListener("submit", async function(e){
     document.getElementById("mailSubject").value =
       `طلب تقديم وظيفة - ${app.number}`;
     document.getElementById("mailReplyTo").value =
-      document.getElementById("email").value;
     document.getElementById("mailNumber").value = app.number;
     document.getElementById("mailPassword").value = app.password;
 
@@ -734,7 +733,7 @@ form.addEventListener("submit", async function(e){
   }catch(err){
     console.error(err);
     showStatus(
-      "حدث خطأ أثناء تجهيز الطلب: " + (err && err.message ? err.message : "خطأ غير معروف") + " — تأكد من اتصال الإنترنت ثم أعد المحاولة.",
+      "حدث خطأ أثناء تجهيز الطلب: " + (err && err.message ? err.message : "خطأ غير معروف") + " — تأكد من اتصال الإنترنت ومن صحة البيانات ثم أعد المحاولة.",
       "err"
     );
   }finally{
